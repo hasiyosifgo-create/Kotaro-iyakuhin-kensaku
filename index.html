@@ -139,7 +139,7 @@ Error generating stack: `+l.message+`
       // Service Workerの登録
       if ('serviceWorker' in navigator) {
         window.addEventListener('load', () => {
-          navigator.serviceWorker.register('/service-worker.js').then(
+          navigator.serviceWorker.register('./service-worker.js').then(
             (registration) => {
               console.log('Service Worker registered:', registration);
             },
@@ -169,3 +169,4 @@ Error generating stack: `+l.message+`
 
 <style>button[aria-label*='更新'], .lucide-rotate, .lucide-refresh { display: none !important; } #kegg-footer { position: fixed; bottom: 0; left: 0; width: 100%; background: #333; color: white; padding: 10px; font-size: 12px; z-index: 9999; box-sizing: border-box; display: none; }</style><div id='kegg-footer'></div><script>setInterval(()=>{if(window.keggChanges && !window.keggFooterShown){let added = window.keggChanges.added || []; let deleted = window.keggChanges.deleted || []; if(added.length>0 || deleted.length>0){document.getElementById('kegg-footer').style.display = 'block'; document.getElementById('kegg-footer').innerHTML = '<b>最近の変更</b><br/>追加: ' + (added.join(', ') || 'なし') + '<br/>削除: ' + (deleted.join(', ') || 'なし');} window.keggFooterShown=true;}}, 1000);</script>
 </body></html>
+
